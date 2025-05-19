@@ -1,5 +1,6 @@
 Feature: Add product to cart on Sauce Demo
 
+  @test_3 @not_implemented
   Scenario: Add a product to the cart
     Given user wants to add a product to the cart
     When  he add the any product to the cart
