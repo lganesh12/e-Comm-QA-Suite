@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+    stages {
+        stage('Run Tests in Parallel') {
+            parallel {
+                stage('JOb 1') {
+                    steps {
+                        script {
+                            build job: 'job1', wait: true
+                            echo "hello i am Ganesh"
+                            sh "/home/ganesh/jenkins_learn/job3.sh"
+                            echo "verifying above job3 text"
+                        }
+                    }
+                }
+                stage('Job 2') {
+                    steps {
+                        script {
+                            build job: 'Job 2', wait: false
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

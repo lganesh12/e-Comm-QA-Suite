@@ -1,5 +1,6 @@
 Feature: End-to-end purchase flow on Sauce Demo
 
+  @test_4 @not_implemented
   Scenario: User logs in, adds a product to the cart, and completes the purchase
     Given User wants to place an order
     When he add any number of products in cart
